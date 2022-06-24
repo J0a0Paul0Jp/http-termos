@@ -16,6 +16,11 @@ pra definir o status de uma solicitação, sendo representado principalmente com
 - ```DELETE``` -> no cenário que tendo uma base de dados, quando chamado iremos deletar um dado ou conjunto que faz parte, baseados no tipo de informações que foi passado na chamada do método
 ----
 
+**Path/Url**: 
+- Uma url quando acessada por um cliente possui diversas opções para que seja passada valores, esses valores podem definir a forma que queremos obter dados, chamados de parâmetros são essenciais em  casos onde trabalhamos com diversos
+ tipos e formas de consulta, como uma pesquisa que gostaríamos de realizar em base dados baseado onde se tem múltiplas filtros, assim também como definir um retorno de valores de forma ordenada por alguma regra
+----
+
 **Body**:
 - é um corpo de informações que enviamos na utilização de algum verbo/método http, como por exemplo quando chamado o método ```POST```, obrigatoriamente devemos passar dados onde esse dado vem passados dentro do body
 ----
