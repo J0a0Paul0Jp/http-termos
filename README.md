@@ -56,7 +56,7 @@ Domain Driven Design
 ----
 
 **Value Objects** 
-- objetos imutáveis, possui um conjunto de atributos
+- objetos imutáveis, possui um conjunto de atributos, onde não pode ter seus atributos mudados depois de intanciaodos
 
 Pessoa pessoa=construtor("Nome","SobreNome","Cpf")
 ----
