@@ -67,5 +67,5 @@ mesmo contexto, sendo entidades os que possui validadores, métodos, e proprieda
 ----
 
 **DTO - Data Transfer Object** 
-- Representa uma classe de transferência de dados entre diferentes camadas da aplicação, podem ser um meio de export apenas dados que seja conveniente a partir de outra objeto, como por exemplo se um objeto possui o campo CPF e queremos que ele não seja exposto podemos usar uma classe DTO, para não export o atributo CPF
+- Representa uma classe de transferência de dados entre diferentes camadas da aplicação de forma mais segura, podem ser um meio de export apenas dados que seja conveniente a partir de outra objeto, como por exemplo se um objeto possui o campo CPF e queremos que ele não seja exposto podemos usar uma classe DTO, para não export o atributo CPF, assim abstraindo funções que outras não entidades não tem obrigações de conhecer
 
