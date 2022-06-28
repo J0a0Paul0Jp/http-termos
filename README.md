@@ -36,10 +36,36 @@ pra definir o status de uma solicitação, sendo representado principalmente com
 
 *Injeção de dependência (Transient, Scoped e Singleton)*
 ---
-**Injeção de dependência** Com a Injeção de dependência o processo de desenvolvimento se torna mais dinâmico, uma vez que vamos se preocupar apenas no desenvolvimento da implementação de nossas classes e não mais nas classes que utilizao meus métodos, como vemos [nesse](https://github.com/J0a0Paul0Jp/http-termos/blob/2275a257dd38fa9687254de477476e3e201ad598/codigos/c%23/Injecao/sem_injecao/Controller.cs#L5) exemplo verificamos que existe uma grande depedência que o controller possui de ```AtendenteService```, dificultando em muitos casos a implementação de testes especificos
+**Injeção de dependência** Com a Injeção de dependência o processo de desenvolvimento se torna mais dinâmico, uma vez que vamos se preocupar apenas no desenvolvimento da implementação de nossas classes e não mais nas classes que utilizam meus métodos, como vemos [nesse](https://github.com/J0a0Paul0Jp/http-termos/blob/2275a257dd38fa9687254de477476e3e201ad598/codigos/c%23/Injecao/sem_injecao/Controller.cs#L5) exemplo verificamos que existe uma grande dependência que o controller possui de ```AtendenteService```, dificultando em muitos casos a implementação de testes específicos
 
 ----
 - ```Singleton``` -> quando uma classe instanciada, o objeto resultante passa a ser o mesmo em todas as operações que forem executada, [injeção de dependência no código](https://github.com/J0a0Paul0Jp/http-termos/blob/2275a257dd38fa9687254de477476e3e201ad598/codigos/c%23/Injecao/com_injecao/Program.cs#L9)
 - ```Transient``` -> uma instancia sempre será criada quando a classe for chamada, assim sempre será um objeto diferente da mesma classe a cada chamada 
 [injeção de dependência no código](https://github.com/J0a0Paul0Jp/http-termos/blob/2275a257dd38fa9687254de477476e3e201ad598/codigos/c%23/Injecao/com_injecao/Program.cs#L10)
 ----
+
+*DDD*
+---
+Domain Driven Design
+- ```Linguagem Ubíqua``` -> linguagem do dia-a-dia presente no contexto do qual fazemos parte do processo
+- ```Bounded Contexts```-> história das relações que podem ocorrer durante o processo de uso
+- ```Context Map``` -> mapeamento dos ```Bounded Contexts```
+
+**Service**
+- Constituem a lógica dos negócios, trabalham com os fluxos através das entidades como também os value objects, assim fazem o papel de ligar dados que constituem a aplicação com diversas entidades como acessar um banco de dados onde é requisitado um dado para a realização de uma tarefa
+----
+
+**Value Objects** 
+- objetos imutáveis, possui um conjunto de atributos
+
+Pessoa pessoa=construtor("Nome","SobreNome","Cpf")
+----
+
+**Aggregate Objects - Entidades**
+- Conjunto de entidades que fazem parte de um
+mesmo contexto, sendo entidades os que possui validadores, métodos, e propriedades
+----
+
+**DTO - Data Transfer Object** 
+- Representa uma classe de transferência de dados entre diferentes camadas da aplicação, podem ser um meio de export apenas dados que seja conveniente a partir de outra objeto, como por exemplo se um objeto possui o campo CPF e queremos que ele não seja exposto podemos usar uma classe DTO, para não export o atributo CPF
+
