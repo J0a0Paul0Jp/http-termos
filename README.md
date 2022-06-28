@@ -48,8 +48,8 @@ pra definir o status de uma solicitação, sendo representado principalmente com
 ---
 Domain Driven Design
 - ```Linguagem Ubíqua``` -> linguagem do dia-a-dia presente no contexto do qual fazemos parte do processo
-- ```Bounded Contexts```-> história das relações que podem ocorrer durante o processo de uso
-- ```Context Map``` -> mapeamento dos ```Bounded Contexts```
+- ```Bounded Contexts```-> história das relações que podem ocorrer durante o processo de uso, delimitando um contexto da aplicação própria 
+- ```Context Map``` -> mapeamento dos ```Bounded Contexts```, exibe as relaçoes que existe em cada entidade do domínio e em que contexto ocorre o relaciona
 
 **Service**
 - Constituem a lógica dos negócios, trabalham com os fluxos através das entidades como também os value objects, assim fazem o papel de ligar dados que constituem a aplicação com diversas entidades como acessar um banco de dados onde é requisitado um dado para a realização de uma tarefa
