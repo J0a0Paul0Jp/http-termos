@@ -1,3 +1,4 @@
+*TERMOS HTTP*
 ----
 O **"status"** é forma de declaração que o servidor retorna em seu corpo de resposta
 pra definir o status de uma solicitação, sendo representado principalmente como código numérico, os códigos mais utilizados dentre eles estão os:
@@ -31,4 +32,14 @@ pra definir o status de uma solicitação, sendo representado principalmente com
 
 **Serialização**: 
 - é a forma de como transformamos o estado de determinado dado para que ele seja compartilhado com outro serviço, e nesse serviço ser possível voltar ao seu estado original, na maioria das vezes um objeto é transformado em bytes para ser utilizado posteriormente  em seu estado original
+----
+
+*Injeção de dependência (Transient, Scoped e Singleton)*
+---
+**Injeção de dependência** Com a Injeção de dependência o processo de desenvolvimento se torna mais dinâmico, uma vez que vamos se preocupar apenas no desenvolvimento da implementação de nossas classes e não mais nas classes que utilizao meus métodos, como vemos [nesse](https://github.com/J0a0Paul0Jp/http-termos/blob/2275a257dd38fa9687254de477476e3e201ad598/codigos/c%23/Injecao/sem_injecao/Controller.cs#L5) exemplo verificamos que existe uma grande depedência que o controller possui de ```AtendenteService```, dificultando em muitos casos a implementação de testes especificos
+
+----
+- ```Singleton``` -> quando uma classe instanciada, o objeto resultante passa a ser o mesmo em todas as operações que forem executada, [injeção de dependência no código](https://github.com/J0a0Paul0Jp/http-termos/blob/2275a257dd38fa9687254de477476e3e201ad598/codigos/c%23/Injecao/com_injecao/Program.cs#L9)
+- ```Transient``` -> uma instancia sempre será criada quando a classe for chamada, assim sempre será um objeto diferente da mesma classe a cada chamada 
+[injeção de dependência no código](https://github.com/J0a0Paul0Jp/http-termos/blob/2275a257dd38fa9687254de477476e3e201ad598/codigos/c%23/Injecao/com_injecao/Program.cs#L10)
 ----
