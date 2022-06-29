@@ -70,4 +70,9 @@ mesmo contexto, sendo entidades os que possui validadores, métodos, e proprieda
 
 **DTO - Data Transfer Object** 
 - Representa uma classe de transferência de dados entre diferentes camadas da aplicação de forma mais segura, podem ser um meio de export apenas dados que seja conveniente a partir de outra objeto, como por exemplo se um objeto possui o campo CPF e queremos que ele não seja exposto podemos usar uma classe DTO, para não export o atributo CPF, assim abstraindo funções que outras entidades não tem obrigações de conhecer
+----
 
+**Leitura de parâmetros**
+- ```appsettings.json``` -> arquivo onde são setado valores estático de configuração, necessários para a execução do programa, podermos definir valores como o host que a aplicação irá rodar, bem como definir configurações de logging, ou chaves secretas como a string de conexão do banco de dados apesar de de não ser a maneira mais segura colocando diretamente no arquivo 
+- ```environment``` -> usando environment é possível setar valores sensíveis que não gostaríamos de deixar exposto no código, podemos definir os valores a partir do sistema que a aplicação está rodando
+- ```command line``` -> está ligado ao modo de passagem de variáveis quando o a execução do programa é chamada, digamos que queremos subscrever valores que está no appsettings.json com valores sensíveis para colocar a aplicação em produção 
